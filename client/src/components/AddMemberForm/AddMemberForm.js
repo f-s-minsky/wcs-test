@@ -14,10 +14,7 @@ const AddMemberForm = (props) => {
     e.preventDefault();
 
     const memberToAdd = { name: nameInput };
-    // console.log(
-    //   'memberToAdd in AddMemberForm',
-    //   memberToAdd
-    // );
+
     props.addNewMember(memberToAdd);
     setNameInput('');
   };
@@ -35,7 +32,7 @@ const AddMemberForm = (props) => {
           name='name'
           type='text'
           placeholder='Homère'
-          value={props.nameInput}
+          value={nameInput}
           onChange={handleInputChange}
         />
         <button type='submit'>Envoyer</button>

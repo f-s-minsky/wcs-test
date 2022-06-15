@@ -5,27 +5,7 @@ import MembersList from '../MembersList/MembersList';
 import './CrewDashboard.css';
 
 const CrewDashboard = () => {
-  // const [nameInput, setNameInput] = useState('');
   const [members, setMembers] = useState([]);
-
-  // useEffect(() => {
-  //   const addMember = async () => {
-  //     try {
-  //       await axios.post(
-  //         'http://localhost:5000/api/members',
-  //         { name: nameInput }
-  //       );
-  //       // setMembers((prevState) =>
-  //       //   prevState.concat(nameInput)
-  //       // );
-
-  //       // console.log('members ', members);
-  //     } catch (error) {}
-  //   };
-  //   addMember();
-  // }, [nameInput]);
-
-  // GET request data from database
 
   const getMembersList = async () => {
     try {
@@ -49,26 +29,6 @@ const CrewDashboard = () => {
   useEffect(() => {
     getMembersList();
   }, []);
-
-  // const addNewMember = (memberToAdd) => {
-  //   // setMembers([...members, nameInput]);
-  //   // setNameInput(nameInput);
-  //   setMembers([...members, memberToAdd]);
-  //   console.log(
-  //     'addNewMemberHandler nameInput param CrewDash',
-  //     nameInput
-  //   );
-  // };
-
-  // console.log(
-  //   'nameInput in CrewDash after useeffect+',
-  //   nameInput
-  // );
-
-  // console.log(
-  //   'members in CrewDash after useeffect:',
-  //   members
-  // );
 
   const addNewMember = async (memberToAdd) => {
     try {
