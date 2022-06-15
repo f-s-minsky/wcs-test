@@ -11,10 +11,6 @@ const MembersList = ({ members }) => {
           <li key={uuidv4()}>{member.name}</li>
         ))}
       </ul>
-
-      {/* <h1 className='member-list-message'>
-          NO CREWMENBERS YET !!!
-        </h1> */}
     </>
   );
 };
