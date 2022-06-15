@@ -21,7 +21,6 @@ const AddMemberForm = (props) => {
 
   return (
     <>
-      <h2>Ajouter un(e) Argonaute</h2>
       <form
         className='add-member-form'
         onSubmit={handleSubmit}
@@ -35,7 +34,12 @@ const AddMemberForm = (props) => {
           value={nameInput}
           onChange={handleInputChange}
         />
-        <button type='submit'>Envoyer</button>
+        <button
+          type='submit'
+          className='add-member-form-button'
+        >
+          Envoyer
+        </button>
       </form>
     </>
   );

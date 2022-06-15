@@ -43,10 +43,13 @@ const CrewDashboard = () => {
   };
 
   return (
-    <>
+    <div className='crew-dashboard'>
+      <h2 className='crew-dashboad-title'>
+        Ajouter un(e) Argonaute
+      </h2>
       <AddMemberForm addNewMember={addNewMember} />
       <MembersList members={members} />
-    </>
+    </div>
   );
 };
 

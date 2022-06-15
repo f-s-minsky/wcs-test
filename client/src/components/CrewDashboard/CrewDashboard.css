@@ -1,0 +1,9 @@
+.crew-dashboard{
+  background: linear-gradient(to left, #606162 , #353539);;
+  height: 85vh;
+  color:white
+}
+
+.crew-dashboad-title{ 
+  padding: 50px 0 20px;
+}

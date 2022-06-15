@@ -30,6 +30,7 @@ export const addNewCrewMember = async (req, res, next) => {
       member: member,
     });
   } catch (error) {
+    console.log(error);
     res.status(400).json({
       success: false,
     });
