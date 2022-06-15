@@ -1,7 +1,9 @@
 .crew-dashboard{
   background: linear-gradient(to left, #606162 , #353539);;
   height: 85vh;
-  color:white
+  color:white;
+  display: flex;
+  flex-direction: column;
 }
 
 .crew-dashboad-title{ 

@@ -15,9 +15,9 @@ const CrewDashboard = () => {
 
       const responseData = response.data.members;
 
-      console.log('[...responseData] in getMemberList', [
-        ...responseData,
-      ]);
+      // console.log('[...responseData] in getMemberList', [
+      //   ...responseData,
+      // ]);
 
       setMembers([...responseData]);
     } catch (error) {
