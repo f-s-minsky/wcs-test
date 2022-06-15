@@ -26,6 +26,7 @@ const CrewDashboard = () => {
     getMembersList();
   }, []);
 
+  //Post request add new member
   const addNewMember = async (memberToAdd) => {
     try {
       await axios.post(
@@ -46,19 +47,6 @@ const CrewDashboard = () => {
       <AddMemberForm addNewMember={addNewMember} />
       <MembersList members={members} />
     </div>
-    // <>
-    //   {loading === false ? (
-    //     <div className='crew-dashboard'>
-    //       <h2 className='crew-dashboad-title'>
-    //         Ajouter un(e) Argonaute
-    //       </h2>
-    //       <AddMemberForm addNewMember={addNewMember} />
-    //       <MembersList members={members} />
-    //     </div>
-    //   ) : (
-    //     <h2>Loading.....</h2>
-    //   )}
-    // </>
   );
 };
 
