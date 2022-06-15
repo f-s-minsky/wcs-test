@@ -15,3 +15,8 @@
   flex-basis: 30%;
   text-align: center;
 }
+
+.member-list-message{
+  padding: 100px;
+  text-align: center;
+}

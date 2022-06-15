@@ -15,10 +15,6 @@ const CrewDashboard = () => {
 
       const responseData = response.data.members;
 
-      // console.log('[...responseData] in getMemberList', [
-      //   ...responseData,
-      // ]);
-
       setMembers([...responseData]);
     } catch (error) {
       console.error(error);
@@ -50,6 +46,19 @@ const CrewDashboard = () => {
       <AddMemberForm addNewMember={addNewMember} />
       <MembersList members={members} />
     </div>
+    // <>
+    //   {loading === false ? (
+    //     <div className='crew-dashboard'>
+    //       <h2 className='crew-dashboad-title'>
+    //         Ajouter un(e) Argonaute
+    //       </h2>
+    //       <AddMemberForm addNewMember={addNewMember} />
+    //       <MembersList members={members} />
+    //     </div>
+    //   ) : (
+    //     <h2>Loading.....</h2>
+    //   )}
+    // </>
   );
 };
 
