@@ -6,7 +6,6 @@ import './CrewDashboard.css';
 
 const CrewDashboard = () => {
   const [members, setMembers] = useState([]);
-
   const [nameInput, setNameInput] = useState('');
 
   // Execute GET request and load in members state
@@ -15,9 +14,9 @@ const CrewDashboard = () => {
   }, []);
 
   // Execute POST request and load in members state
-  useEffect(() => {
-    addNewMember();
-  });
+  // useEffect(() => {
+  //   addNewMember();
+  // });
 
   const getMembersList = async () => {
     try {

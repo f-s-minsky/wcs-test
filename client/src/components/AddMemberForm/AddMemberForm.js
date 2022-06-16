@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import './AddMemberForm.css';
 
 const AddMemberForm = (props) => {
-  // const [nameInput, setNameInput] = useState('');
-
   const handleInputChange = (e) => {
     const name = e.target.value;
 
