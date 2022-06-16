@@ -1,7 +1,6 @@
 .member-list {
   list-style: none;
-  margin: 1rem 0 1rem 2rem;
-  padding: 0;
+  padding: 2em 0 2em 3.5em;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -16,6 +15,6 @@
   text-align: center;
 }
 
-/* .member-list-message{
-  text-align: center;
-} */
+.member-list-message{
+  padding-top: 80px;
+}

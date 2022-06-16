@@ -13,11 +13,6 @@ const CrewDashboard = () => {
     getMembersList();
   }, []);
 
-  // Execute POST request and load in members state
-  // useEffect(() => {
-  //   addNewMember();
-  // });
-
   const getMembersList = async () => {
     try {
       const response = await axios.get(
