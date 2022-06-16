@@ -7,6 +7,18 @@ import './CrewDashboard.css';
 const CrewDashboard = () => {
   const [members, setMembers] = useState([]);
 
+  const [nameInput, setNameInput] = useState('');
+
+  // Execute GET request and load in members state
+  useEffect(() => {
+    getMembersList();
+  }, []);
+
+  // Execute POST request and load in members state
+  useEffect(() => {
+    addNewMember();
+  });
+
   const getMembersList = async () => {
     try {
       const response = await axios.get(
@@ -20,11 +32,6 @@ const CrewDashboard = () => {
       console.error(error);
     }
   };
-
-  // Execute Get request and load in members state
-  useEffect(() => {
-    getMembersList();
-  }, []);
 
   //Post request add new member
   const addNewMember = async (memberToAdd) => {
@@ -44,7 +51,11 @@ const CrewDashboard = () => {
       <h2 className='crew-dashboad-title'>
         Ajouter un(e) Argonaute
       </h2>
-      <AddMemberForm addNewMember={addNewMember} />
+      <AddMemberForm
+        addNewMember={addNewMember}
+        nameInput={nameInput}
+        setNameInput={setNameInput}
+      />
       <MembersList members={members} />
     </div>
   );

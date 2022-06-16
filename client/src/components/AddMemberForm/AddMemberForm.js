@@ -2,21 +2,21 @@ import { useState } from 'react';
 import './AddMemberForm.css';
 
 const AddMemberForm = (props) => {
-  const [nameInput, setNameInput] = useState('');
+  // const [nameInput, setNameInput] = useState('');
 
   const handleInputChange = (e) => {
     const name = e.target.value;
 
-    setNameInput(name);
+    props.setNameInput(name);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const memberToAdd = { name: nameInput };
+    const memberToAdd = { name: props.nameInput };
 
     props.addNewMember(memberToAdd);
-    setNameInput('');
+    props.setNameInput('');
   };
 
   return (
@@ -31,7 +31,7 @@ const AddMemberForm = (props) => {
           name='name'
           type='text'
           placeholder='Homère'
-          value={nameInput}
+          value={props.nameInput}
           onChange={handleInputChange}
         />
         <button
